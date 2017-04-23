@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.paviannik.pavitranslator.MainActivity"
+    android:background="#FFF">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:contentInsetStart="0dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:orientation="horizontal">
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/textInput"
+        android:layout_width="0dp"
+        android:layout_height="145dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edittextstyle"
+        android:ems="10"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:textAllCaps="false"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintRight_toLeftOf="@+id/id_btnTranslate" />
+
+    <ToggleButton
+        android:id="@+id/addfavorite"
+        style="@style/toggleButton"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_bookmarks_bg"
+        android:backgroundTint="@color/nav_active"
+        android:drawablePadding="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textOutput" />
+
+    <ImageButton
+        android:id="@+id/id_btnTranslate"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:text=""
+        android:tint="@color/nav_active"
+        app:layout_constraintBottom_toBottomOf="@+id/textInput"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/ic_translate" />
+
+    <ImageButton
+        android:id="@+id/id_btnClear"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:text=""
+        android:tint="@color/nav_active"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/ic_cancel"
+        app:layout_constraintBottom_toTopOf="@+id/id_btnTranslate" />
+
+    <TextView
+        android:id="@+id/textOutput"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittextstyle"
+        android:gravity="start"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:text=""
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/addfavorite"
+        app:layout_constraintTop_toBottomOf="@+id/copyRight" />
+
+    <Spinner
+        android:id="@+id/SecondLangSpinner"
+        android:layout_width="144dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/id_btnSwap"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <ImageButton
+        android:id="@+id/id_btnSwap"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text=""
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:tint="@color/nav_active"
+        app:srcCompat = "@drawable/ic_recycle"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <Spinner
+        android:id="@+id/FirstLangSpinner"
+        android:layout_width="144dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/id_btnSwap"
+        android:layout_marginRight="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <TextView
+        android:id="@+id/copyRight"
+        android:layout_width="0dp"
+        android:layout_height="17dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:focusableInTouchMode="false"
+        android:text="@string/copyright_text"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textInput" />
+
+</android.support.constraint.ConstraintLayout>

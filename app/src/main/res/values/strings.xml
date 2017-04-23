@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Pavi.Translator</string>
+    <string name="title_home">Переводчик</string>
+    <string name="title_history">История</string>
+    <string name="title_favorites">Избранное</string>
+    <string name="settings_toast_historycleared">История очищена</string>
+    <string name="settings_toast_favoritescleader">Избранное очищено</string>
+    <string name="copyright_text">«Переведено сервисом «Яндекс.Переводчик» </string>
+    <string name="response_empty">Пустой запрос</string>
+    <string name="response_no_internet">Нет соединения с интернетом</string>
+    <string name="top_history">История</string>
+    <string name="top_favorites">Избранное</string>
+
+</resources>
