@@ -73,11 +73,11 @@ public class MyTranslatorClass {
                     Toast.LENGTH_LONG).show();
             return;
         }
-        /*Init new Thread and run it*/
+
         getTranslateThread = new Thread(new Runnable() {
             @Override
             public void run() {
-                /*Collect all data to ArrayList*/
+
                 String textFromField = textField.getText().toString();
                 Log.e(PT_log,textFromField);
                 List<BasicNameValuePair> nameValuePairs = new ArrayList<>(2);
@@ -85,7 +85,7 @@ public class MyTranslatorClass {
                 nameValuePairs.add(new BasicNameValuePair("text", textFromField));
                 nameValuePairs.add(new BasicNameValuePair("lang",getLangPair()));
 
-                /*Send request to THTTPProvider*/
+
                 myHttpManager.sendPostRequestToTranslate(translateTextFromSDKString,
                         nameValuePairs,
                         exportView);
